@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": false,
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/node_modules/": true,
+    "**/build/**/*.js.map": {
+      "when": "$(basename).js"
+    },
+    "**/build/**/*.js": {
+      "when": "$(basename).ts"
+    }
+  },
+  "search.exclude": {
+    "build": true,
+    "node_modules": true
+  },
+  "eslint.validate": ["typescript"],
+  "[json]": {
+    "editor.formatOnSave": true,
+  },
+  "[html]": {
+    "editor.formatOnSave": true,
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": false
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

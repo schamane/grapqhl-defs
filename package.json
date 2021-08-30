@@ -1,0 +1,72 @@
+{
+  "name": "@schamane/graphql-defs",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "source": "src/index.ts",
+  "types": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "source-map-support": "^0.5.19"
+  },
+  "scripts": {
+    "lint": "eslint --ext .ts src/",
+    "lint:fix": "eslint --fix --ext .ts src/",
+    "clean:build": "rimraf build",
+    "clean:build:cache": "rimraf build .buildcache",
+    "clean": "npm run -s clean:build && npm run -s clean:build:cache",
+    "prepublishOnly": "npm run build",
+    "build:check": "tsc",
+    "build": "microbundle --no-compress --target node --external util,events,http,@schamane/small-graphql-mongoose-middleware --format modern,cjs",
+    "watch": "microbundle watch --no-compress --target node --external util,events,http,@schamane/small-graphql-mongoose-middleware --format modern,cjs"
+  },
+  "devDependencies": {
+    "@schamane/small-graphql-mongoose-middleware": "^1.0.10",
+    "@types/lodash": "^4.14.172",
+    "@types/node": "^16.7.8",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "apollo-server-express": "^3.3.0",
+    "date-fns": "^2.23.0",
+    "eslint": "7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-recommended": "^4.1.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "graphql": "^15.5.2",
+    "graphql-type-json": "^0.3.2",
+    "microbundle": "^0.13.3",
+    "prettier-eslint": "^13.0.0",
+    "rimraf": "^3.0.2",
+    "typescript": "4.4.2"
+  },
+  "peerDependacies": {
+    "@schamane/small-graphql-mongoose-middleware": "^1.0.10"
+  },
+  "peerDevDependacies": {
+    "@schamane/small-graphql-mongoose-middleware": "^1.0.10"
+  },
+  "resolutions": {
+    "@schamane/small-graphql-mongoose-middleware": "^1.0.10"
+  },
+  "repository": "schamane/small-graphql-mongoose-middleware",
+  "keywords": [
+    "helpers",
+    "nodejs",
+    "grapqhl",
+    "apollo-grapqhl",
+    "application"
+  ],
+  "author": "Nazar Kulyk <schamane@myeburg.net> (https://myeburg.net)",
+  "license": "MIT",
+  "engines": {
+    "node": "^16",
+    "npm": "^7"
+  }
+}
