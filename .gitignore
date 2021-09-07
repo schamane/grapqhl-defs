@@ -13,6 +13,7 @@ copyStaticAssets.js
 
 # production
 /build
+/dist
 /.buildcache
 
 # misc
@@ -26,5 +27,3 @@ copyStaticAssets.js
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-.eslintcache

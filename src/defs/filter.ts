@@ -1,5 +1,5 @@
 import { gql } from 'apollo-server-express';
-import { FilterOperator, SortDirection } from '@schamane/small-graphql-mongoose-middleware';
+import { FilterOperator } from '../models/filter';
 
 const typeDef = gql`
   enum FilterOperator {
@@ -13,11 +13,6 @@ const typeDef = gql`
     CONTAINS
     IN
     NIN
-  }
-
-  enum SorterDirection {
-    asc
-    desc
   }
 
   input Sorter {
@@ -44,11 +39,6 @@ const resolvers = {
     CONTAINS: FilterOperator.CONTAINS,
     IN: FilterOperator.IN,
     NIN: FilterOperator.NIN
-  },
-
-  SorterDirection: {
-    asc: SortDirection.ASC,
-    desc: SortDirection.DESC
   }
 };
 

@@ -1,25 +1,28 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "src/*": ["src/*"]
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "src/*": ["src/*"],
+        "types/*": ["types/*"],
+        "@/*": ["./*"]
+      },
+      "incremental": true,
+      "tsBuildInfoFile": "./.buildcache/api.tsbuildinfo",
+      "module": "ES2020",
+      "esModuleInterop": true,
+      "target": "ES2020",
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist",
+      "skipLibCheck": true
     },
-    "incremental": true,
-    "tsBuildInfoFile": "./.buildcache/api.tsbuildinfo",
-    "module": "ESNext",
-    "esModuleInterop": true,
-    "target": "esnext",
-    "noImplicitAny": true,
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "declaration": true,
-    "outDir": "build",
-    "skipLibCheck": true
-  },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
-}
+    "typeRoots": ["./types"],
+    "include": [
+      "src/**/*",
+      "types/*"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }

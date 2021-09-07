@@ -1,4 +1,4 @@
-import { Filter, Sorter } from '@schamane/small-graphql-mongoose-middleware';
+import { Filter, Sorter } from '../../models/filter';
 
 export interface FilterContext {
   filters?: Filter[];

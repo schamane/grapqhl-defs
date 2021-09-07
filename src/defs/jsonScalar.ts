@@ -1,5 +1,5 @@
 import { gql } from 'apollo-server-express';
-import { GraphQLJSON, GraphQLJSONObject } from 'graphql-type-json';
+import { GraphQLJSON, GraphQLJSONObject } from 'graphql-scalars';
 
 const typeDef = gql`
   scalar JSON
