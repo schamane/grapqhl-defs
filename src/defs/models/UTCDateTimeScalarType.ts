@@ -2,6 +2,7 @@ import { GraphQLScalarType, StringValueNode } from 'graphql';
 import { formatISO, isValid, parseJSON } from 'date-fns';
 
 export const UTCDateTimeScalarType = new GraphQLScalarType({
+  name: 'UTCDateTime',
 
   description: 'The `DateTime` scalar represents a date and time following the ISO 8601 standard',
 
