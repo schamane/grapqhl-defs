@@ -1,4 +1,4 @@
-import { get, orderBy } from 'lodash';
+import { get, orderBy } from 'lodash-es';
 import { Sorter } from './models/filter';
 
 const toLodashSort = (sortObject: Sorter) => [[get(sortObject, 'name', [])], [get(sortObject, 'direction', [])]] as any[][];
