@@ -2,7 +2,6 @@ import { GraphQLScalarType, StringValueNode } from 'graphql';
 import { formatISO, isValid, parseJSON } from 'date-fns';
 
 export const UTCDateTimeScalarType = new GraphQLScalarType({
-  name: 'UCTDateTime',
 
   description: 'The `DateTime` scalar represents a date and time following the ISO 8601 standard',
 
@@ -11,7 +10,7 @@ export const UTCDateTimeScalarType = new GraphQLScalarType({
     return value;
   },
 
-  parseValue(value): string {
+  parseValue(value: number | Date): string {
     if (!isValid(isValid)) {
       throw new TypeError(`DateTime must be in a recognized RFC2822 or ISO 8601 format ${String(value)}.`);
     }

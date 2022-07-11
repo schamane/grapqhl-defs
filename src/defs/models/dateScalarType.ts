@@ -11,7 +11,7 @@ export const DateScalarType = new GraphQLScalarType({
     return value;
   },
 
-  parseValue(value): string {
+  parseValue(value: string): string {
     if (!isValid(parseISO(value))) {
       throw new TypeError(`DateTime must be in a recognized RFC2822 or ISO 8601 format ${String(value)}.`);
     }
