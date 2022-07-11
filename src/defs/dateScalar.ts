@@ -3,12 +3,12 @@ import { DateScalarType, UTCDateTimeScalarType } from './models';
 
 const typeDef = gql`
   scalar Date
-  scalar UCTDateTime
+  scalar UTCDateTime
 `;
 
 const resolvers = {
   Date: DateScalarType,
-  UCTDateTime: UTCDateTimeScalarType
+  UTCDateTime: UTCDateTimeScalarType
 };
 
 export const DateScalarSchema = { typeDef, resolvers };
